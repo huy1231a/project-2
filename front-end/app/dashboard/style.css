@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  width: auto;
+  padding: 15px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: aquamarine;
+}
+
+.layout {
+  width: auto;
+  display: flex;
+  gap: 10px
+}
+
+.side_bar {
+  background-color: bisque;
+  /* width: 250px; */
+}

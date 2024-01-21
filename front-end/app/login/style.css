@@ -1,0 +1,56 @@
+.form-login {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  gap: 20px;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-1 {
+  color: var(--Text-Primary-color, #11142d);
+
+  /* Bold 37 */
+  font-family: Manrope;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.title-2 {
+  color: var(--2nd-text-color, #808191);
+
+  /* Regular 16 */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.img-login {
+  background-color: transparent;
+  z-index: 1000;
+  opacity: 20;
+}
+
+.text-btn {
+  color: var(--White-color, #fcfcfc);
+  text-align: center;
+
+  /* Semibold 16 */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
