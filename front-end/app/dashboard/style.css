@@ -1,21 +1,32 @@
 .nav {
-  display: flex;
   width: auto;
   padding: 15px 20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 10px;
-  background-color: aquamarine;
+  background-color: whitesmoke;
 }
 
 .layout {
   width: auto;
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 
-.side_bar {
-  background-color: bisque;
-  /* width: 250px; */
+.dashboard {
+  /* background-color: #e4e8ef; */
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.card__dash {
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
+}
+
+.chart {
+  max-width: 730px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  margin-top: 20px;
 }

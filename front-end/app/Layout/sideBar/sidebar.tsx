@@ -1,19 +1,22 @@
-"use client";
-import React, { useState } from "react";
+'use client'
+import React, { useState } from 'react'
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
+  MessageOutlined,
+  StarOutlined,
+  StockOutlined,
   TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import type { MenuProps } from "antd";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-import { useRouter } from "next/navigation";
+  MehOutlined,
+  AppstoreOutlined,
+} from '@ant-design/icons'
+import type { MenuProps } from 'antd'
+import { Breadcrumb, Layout, Menu, theme } from 'antd'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import './style.css'
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout
 
-type MenuItem = Required<MenuProps>["items"][number];
+type MenuItem = Required<MenuProps>['items'][number]
 
 function getItem(
   label: React.ReactNode,
@@ -28,49 +31,66 @@ function getItem(
     children,
     label,
     pathName,
-  } as MenuItem;
+  } as MenuItem
 }
 
 const items: MenuItem[] = [
-  getItem("Dashboard", "1", <PieChartOutlined />),
-  getItem("Property", "2", <DesktopOutlined />),
-  getItem("Agent", "3", <TeamOutlined />),
-  getItem("Review", "4", <TeamOutlined />),
-  getItem("Message", "5", <FileOutlined />),
-  getItem("My Profile", "6", <FileOutlined />),
-];
+  getItem(
+    <Link href={'/dashboard'}>Dashboard</Link>,
+    '1',
+    <AppstoreOutlined />
+  ),
+  getItem(
+    <Link href={'/dashboard/properties'}>Property</Link>,
+    '2',
+    <StockOutlined />
+  ),
+  getItem(<Link href={'/dashboard/agent'}>Agent</Link>, '3', <TeamOutlined />),
+  getItem(
+    <Link href={'/dashboard/review'}>Review</Link>,
+    '4',
+    <StarOutlined />
+  ),
+  getItem(
+    <Link href={'/dashboard/message'}>Message</Link>,
+    '5',
+    <MessageOutlined />
+  ),
+  getItem(
+    <Link href={'/dashboard/profile'}>My Profile</Link>,
+    '6',
+    <MehOutlined />
+  ),
+]
 
 const Sidebar: React.FC = () => {
-  const router = useRouter();
-  const [collapsed, setCollapsed] = useState(false);
+  const router = useRouter()
+  const [collapsed, setCollapsed] = useState(false)
   const {
     token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
+  } = theme.useToken()
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ minHeight: '100vh' }}>
       <Sider
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
         width={250}
-      >
-        <div className="demo-logo-vertical" />
+        style={{ backgroundColor: 'white' }}>
+        <div className='demo-logo-vertical' />
         <div>
           <Menu
-            theme="dark"
-            defaultSelectedKeys={["1"]}
-            mode="inline"
+            theme='light'
+            defaultSelectedKeys={['1']}
+            mode='inline'
             items={items}
-            style={{ padding: "20px" }}
-            onClick={() => {
-              router.push("/dashboard/properties");
-            }}
+            style={{ padding: '20px' }}
           />
         </div>
       </Sider>
     </Layout>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar
