@@ -2,6 +2,7 @@ import React from 'react'
 import './style.css'
 import Card, { Type } from '../Layout/dashboard/card'
 import Chart from '../Layout/dashboard/chart/chart'
+import RightChart from '../Layout/dashboard/chart/righ_bar_chart/right_bar_chart'
 
 const dataCard: Type[] = [
   {
@@ -104,6 +105,9 @@ const Dashboard = () => {
       <div className='chart__profile'>
         <div className='chart'>
           <Chart />
+        </div>
+        <div className='right__chart'>
+          <RightChart />
         </div>
       </div>
     </div>

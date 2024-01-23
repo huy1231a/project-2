@@ -1,0 +1,102 @@
+.title__chart {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.title__1 {
+  color: var(--Text-Primary-color, #11142d);
+  /* Semibold 18 */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.title__2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.last__month {
+  color: var(--2nd-text-color, #808191);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.runnung__month {
+  color: var(--2nd-text-color, #808191);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.data__chart {
+  display: inline-flex;
+  align-content: center;
+  gap: 38px;
+  margin-left: 20px;
+}
+
+.circle {
+  padding: 5px 6px;
+  border-radius: 9999px;
+  background-color: white;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.circle .svg_op {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.squal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.more__than {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.number__chart {
+  color: var(--Primary-color, #475be8);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.month {
+  color: var(--2nd-text-color, #808191);
+  /* Regular 12 */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+}
+
+.total__num {
+  color: var(--Text-Primary-color, #11142d);
+  /* Bold 28 */
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

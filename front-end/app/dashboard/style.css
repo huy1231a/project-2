@@ -25,8 +25,27 @@
 }
 
 .chart {
-  max-width: 730px;
+  width: 730px;
   background-color: whitesmoke;
   border-radius: 15px;
   margin-top: 20px;
+  margin-left: 15px;
+}
+
+.chart__profile {
+  display: flex;
+  gap: 20px;
+}
+
+.right__chart {
+  margin-top: 20px;
+  display: inline-flex;
+  height: 363px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: whitesmoke;
+  border-radius: 10px;
 }

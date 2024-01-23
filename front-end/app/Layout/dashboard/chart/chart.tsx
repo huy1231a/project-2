@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Column } from '@ant-design/plots'
+import './style.css'
 
 interface DataItem {
   name: string
@@ -56,7 +57,63 @@ const DemoColumn: React.FC = () => {
     },
   }
 
-  return <Column {...config} />
+  return (
+    <div>
+      <div className='title__chart'>
+        <h4 className='title__1'>Total Revenue</h4>
+        <div className='title__2'>
+          <div className='last__month'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='13'
+              height='13'
+              viewBox='0 0 13 13'
+              fill='none'>
+              <circle cx='6.5' cy='6.5' r='6.5' fill='#6C5DD3' />
+            </svg>
+            <span>Last Month</span>
+          </div>
+          <div className='runnung__month'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='13'
+              height='13'
+              viewBox='0 0 13 13'
+              fill='none'>
+              <circle cx='6.5' cy='6.5' r='6.5' fill='#CFC8FF' />
+            </svg>
+            <span>Running Month</span>
+          </div>
+        </div>
+      </div>
+      <div className='data__chart'>
+        <p className='total__num'>$236,535</p>
+        <div className='squal'>
+          <div className='circle'>
+            <div className='svg_op'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='8'
+                height='10'
+                viewBox='0 0 8 10'
+                fill='#FCFCFC'
+                className=''>
+                <path
+                  d='M0.910457 4.30885C0.702177 4.52478 0.364489 4.52478 0.15621 4.30885C-0.0520699 4.09292 -0.0520699 3.74283 0.15621 3.5269L3.24575 0.323893C3.66231 -0.107964 4.33769 -0.107965 4.75425 0.323893L7.84379 3.5269C8.05207 3.74283 8.05207 4.09292 7.84379 4.30885C7.63551 4.52478 7.29782 4.52478 7.08954 4.30885L4.53333 1.65876V9.44708C4.53333 9.75245 4.29455 10 4 10C3.70545 10 3.46667 9.75245 3.46667 9.44708V1.65876L0.910457 4.30885Z'
+                  fill='#6C5DD3'
+                />
+              </svg>
+            </div>
+          </div>
+          <div className='more__than'>
+            <span className='number__chart'>0,8%</span>
+            <span className='month'>Than last Month</span>
+          </div>
+        </div>
+      </div>
+      <Column {...config} />
+    </div>
+  )
 }
 
 const App: React.FC = () => {
